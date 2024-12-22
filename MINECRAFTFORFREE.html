@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">King Von Anti Piracy</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/screenshots/CREATE_BuildAlmostAnything.png');
+    background-size: cover;
+    background-position: center;
+}
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="openAntiPiracyWindow();">Click Here To Download Minecraft For Free!</button>
+    <script>
+       function openAntiPiracyWindow() {
+           const width = window.innerWidth / 2;
+           const height = window.innerHeight / 1.5;
+           const newWindow = window.open("", "King Von Anti Piracy", `width=${width},height=${height}`);
+           
+           newWindow.document.write(`
+               <html>
+                   <head>
+                        <style>
+                           body {
+                               background-position: center;
+                               overflow: hidden;
+                               background-image: url('https://i.kym-cdn.com/editorials/icons/mobile/000/011/170/king-von-anti-piracy.jpg');
+                               background-size: cover;
+                           }
+                       </style>
+                   </head>
+                   <body></body>
+               </html>
+           `);
+           setInterval(() => {
+            let xpos = Math.floor(Math.random() * (window.screen.width - width));
+            let ypos = Math.floor(Math.random() * (window.screen.height - height));
+            newWindow.moveTo(xpos, ypos);
+           },150)
+           var title = document.getElementById("title")
+           setTimeout(() => {
+               newWindow.close();
+                title.innerText = 0
+                while(true){
+                    title.innerText **=10
+                }
+           }, 5000);
+        }
+   </script>
+</body>
+</html>
